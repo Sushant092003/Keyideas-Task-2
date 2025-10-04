@@ -1,0 +1,331 @@
+/* --- ADD THESE STYLES TO THE END OF YOUR CSS FILE --- */
+
+/* 1. Basic container styling for the new section */
+.arrow-section {
+  padding: 1rem 10rem;
+  background-color: #ffffff; /* Use a white or light grey background */
+}
+
+/* 2. Styles for the content inside the arrow-section */
+.arrow-section .main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.arrow-section .main-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 2rem;
+}
+
+.arrow-section .main-content p {
+  font-size: 0.9rem;
+  color: #000;
+  margin-bottom: 12rem;
+  max-width: 600px;
+}
+
+.arrow-section .breadcrumb-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.arrow-section .timeline-step {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+}
+
+.arrow-section .breadcrumb-item {
+  background-color: #f2f2f2;
+  color: #495057;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1.8rem 2rem;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  clip-path: polygon(
+    0% 0%,
+    calc(100% - 20px) 0,
+    100% 50%,
+    calc(100% - 20px) 100%,
+    0% 100%,
+    20px 50%
+  );
+}
+
+.arrow-section .timeline-step:not(:first-child) {
+  margin-left: -10px;
+}
+
+.arrow-section .timeline-step:first-child .breadcrumb-item {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  clip-path: polygon(
+    0% 0%,
+    calc(100% - 20px) 0,
+    100% 50%,
+    calc(100% - 20px) 100%,
+    0% 100%
+  );
+}
+
+.arrow-section .timeline-step:last-child .breadcrumb-item {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%, 20px 50%);
+}
+
+.arrow-section .breadcrumb-item .title {
+  font-weight: 400;
+  font-size: 14px;
+  color: #555;
+}
+
+.arrow-section .breadcrumb-item .subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 4px;
+  color: #555;
+}
+
+.arrow-section .timeline-step::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  display: block;
+  background-color: #ced4da;
+  width: 2px;
+  height: 60px;
+}
+
+.arrow-section .timeline-capsule {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.arrow-section .timeline-capsule .icon-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: #baa2eb;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.arrow-section .timeline-capsule .label {
+  background-color: #4f149a;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.arrow-section .timeline-step:nth-child(odd)::before {
+  bottom: 100%;
+}
+.arrow-section .timeline-step:nth-child(odd) .timeline-capsule {
+  bottom: calc(100% + 60px);
+}
+
+.arrow-section .timeline-step:nth-child(even)::before {
+  top: 100%;
+}
+.arrow-section .timeline-step:nth-child(even) .timeline-capsule {
+  top: calc(100% + 60px);
+}
+
+/* 3. Responsive styles for the timeline */
+@media (max-width: 1200px) {
+  .arrow-section .main-content h1 {
+    font-size: 2.2rem;
+  }
+  .arrow-section .main-content p {
+    font-size: 1rem;
+    margin-bottom: 15rem;
+  }
+  .arrow-section .breadcrumb-container {
+    flex-wrap: wrap;
+    gap: 20px 0;
+  }
+  .arrow-section .timeline-step {
+    flex-grow: 0;
+    flex-basis: calc(33.333% - 6.7px);
+    margin-left: 0;
+  }
+  .arrow-section .timeline-step:not(:nth-child(3n + 1)) {
+    margin-left: -10px;
+  }
+  .arrow-section .timeline-capsule {
+    max-width: 200px;
+  }
+  .arrow-section .timeline-capsule .label {
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .arrow-section .timeline-step .breadcrumb-item {
+    border-radius: 0;
+    clip-path: polygon(
+      0% 0%,
+      calc(100% - 20px) 0,
+      100% 50%,
+      calc(100% - 20px) 100%,
+      0% 100%,
+      20px 50%
+    );
+  }
+  .arrow-section .timeline-step:nth-child(3n + 1) .breadcrumb-item {
+    clip-path: polygon(
+      0% 0%,
+      calc(100% - 20px) 0,
+      100% 50%,
+      calc(100% - 20px) 100%,
+      0% 100%
+    );
+  }
+  .arrow-section .timeline-step:nth-child(3n) .breadcrumb-item {
+    clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%, 20px 50%);
+  }
+  .arrow-section .timeline-step:first-child .breadcrumb-item {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+  .arrow-section .timeline-step:last-child .breadcrumb-item {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+  .arrow-section .timeline-step:nth-child(-n + 3)::before {
+    top: auto;
+    bottom: 100%;
+  }
+  .arrow-section .timeline-step:nth-child(-n + 3) .timeline-capsule {
+    top: auto;
+    bottom: calc(100% + 60px);
+  }
+  .arrow-section .timeline-step:nth-child(n + 4)::before {
+    bottom: auto;
+    top: 100%;
+  }
+  .arrow-section .timeline-step:nth-child(n + 4) .timeline-capsule {
+    bottom: auto;
+    top: calc(100% + 60px);
+  }
+}
+
+@media (max-width: 768px) {
+  .arrow-section .main-content h1 {
+    text-align: left;
+    font-size: 2rem;
+  }
+  .arrow-section .main-content p {
+    text-align: left;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .arrow-section .breadcrumb-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .arrow-section .timeline-step,
+  .arrow-section .timeline-step:not(:first-child),
+  .arrow-section .timeline-step:not(:nth-child(3n + 1)) {
+    flex-basis: 100%;
+    margin: 0;
+    background: #f2f2f2;
+    border-radius: 16px;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    text-align: left;
+  }
+  .arrow-section .timeline-step::before,
+  .arrow-section .timeline-capsule .icon-circle {
+    display: none;
+  }
+  .arrow-section .timeline-capsule {
+    position: static;
+    transform: none;
+    max-width: none;
+    width: 100%;
+  }
+  .arrow-section .timeline-capsule .label {
+    width: 100%;
+    text-align: left;
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 12px;
+  }
+  .arrow-section .timeline-step .breadcrumb-item,
+  .arrow-section .timeline-step:first-child .breadcrumb-item,
+  .arrow-section .timeline-step:last-child .breadcrumb-item,
+  .arrow-section .timeline-step:nth-child(3n + 1) .breadcrumb-item,
+  .arrow-section .timeline-step:nth-child(3n) .breadcrumb-item {
+    background: transparent;
+    padding: 0;
+    clip-path: none;
+    border-radius: 0;
+    width: 100%;
+    align-items: flex-start;
+  }
+  .arrow-section .breadcrumb-item .title,
+  .arrow-section .breadcrumb-item .subtitle {
+    margin-top: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    position: relative;
+    padding-left: 48px;
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+  .arrow-section .breadcrumb-item .subtitle {
+    font-weight: 400;
+    color: #555;
+  }
+  .arrow-section .timeline-step .breadcrumb-item::before {
+    content: "\2713";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #baa2eb;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 900;
+    font-size: 30px;
+  }
+}
