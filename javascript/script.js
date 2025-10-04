@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
         bg: "bg-purple-light",
       },
       el2: {
-        html: `<div class="grid-content"><img src="../assets/icons/image 5.png" alt="Clutch"/><img src="../assets/icons/image 6.png" alt="Stars"/><h4>Top B2B</h4><p>Providers in the Indian Emerging Tech Market for 2021</p></div>`,
+        html: `<div class="grid-content"><img src="../assets/icons/image 5.webp" alt="Clutch"/><img src="../assets/icons/image 6.webp" alt="Stars"/><h4>Top B2B</h4><p>Providers in the Indian Emerging Tech Market for 2021</p></div>`,
         bg: "bg-purple-medium",
       },
       el3: {
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
         bg: "bg-purple-dark",
       },
       el4: {
-        html: `<div class="grid-content"><img src="../assets/icons/image 9.png" alt="GoodFirms"/><h4>Top Shopify</h4><p>Development Companies in 2019</p></div>`,
+        html: `<div class="grid-content"><img src="../assets/icons/image 9.webp" alt="GoodFirms"/><h4>Top Shopify</h4><p>Development Companies in 2019</p></div>`,
         bg: "bg-purple-medium",
       },
       el5: {
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         bg: "bg-purple-dark",
       },
       el6: {
-        html: `<div class="grid-content"><img src="../assets/icons/Group 44.png" alt="Microsoft"/></div>`,
+        html: `<div class="grid-content"><img src="../assets/icons/Group 44.webp" alt="Microsoft"/></div>`,
         bg: "bg-purple-light",
       },
       el7: {
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       // This 9th element isn't clearly visible in the video's first frame, using a plausible placeholder from your code.
       el9: {
-        html: `<div class="grid-content"><img src="../assets/icons/image 5.png" alt="Clutch"/><img src="../assets/icons/image 6.png" alt="Stars"/><h4>TOP 1000</h4><p>B2B Companies 2018</p></div>`,
+        html: `<div class="grid-content"><img src="../assets/icons/image 5.webp" alt="Clutch"/><img src="../assets/icons/image 6.webp" alt="Stars"/><h4>TOP 1000</h4><p>B2B Companies 2018</p></div>`,
         bg: "bg-purple-medium",
       },
     },
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
         bg: "bg-purple-dark",
       },
       el2: {
-        html: `<div class="grid-content"><img src="../assets/icons/image.png" alt="CrowdReviews"/><h4>#1</h4><p>ASP.NET Development Company</p></div>`,
+        html: `<div class="grid-content"><img src="../assets/icons/image.webp" alt="CrowdReviews"/><h4>#1</h4><p>ASP.NET Development Company</p></div>`,
         bg: "bg-purple-medium",
       },
       el3: {
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
         bg: "bg-purple-light",
       },
       el4: {
-        html: `<div class="grid-content"><img src="../assets/icons/image.png" alt="CrowdReviews"/><h4>Top 3</h4><p>E-Commerce Development Company</p></div>`,
+        html: `<div class="grid-content"><img src="../assets/icons/image.webp" alt="CrowdReviews"/><h4>Top 3</h4><p>E-Commerce Development Company</p></div>`,
         bg: "bg-purple-medium",
       },
       el5: {
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
         bg: "bg-purple-light",
       },
       el6: {
-        html: `<div class="grid-content"><img src="../assets/icons/image.png" alt="CrowdReviews"/><h4>Top 10</h4><p>Web Development Company</p></div>`,
+        html: `<div class="grid-content"><img src="../assets/icons/image.webp" alt="CrowdReviews"/><h4>Top 10</h4><p>Web Development Company</p></div>`,
         bg: "bg-purple-medium",
       },
       el7: {
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
         bg: "bg-purple-light",
       },
       el9: {
-        html: `<div class="grid-content"><img src="../assets/icons/image 5.png" alt="Clutch"/><img src="../assets/icons/image 6.png" alt="Stars"/><h4>TOP 1000</h4><p>B2B Companies 2018</p></div>`,
+        html: `<div class="grid-content"><img src="../assets/icons/image 5.webp" alt="Clutch"/><img src="../assets/icons/image 6.webp" alt="Stars"/><h4>TOP 1000</h4><p>B2B Companies 2018</p></div>`,
         bg: "bg-purple-dark",
       },
     },
