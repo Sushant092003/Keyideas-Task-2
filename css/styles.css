@@ -28,6 +28,7 @@ body {
   font-weight: 600;
 }
 
+/* --- Hero Section --- */
 .main-content-hero {
   background-color: #6637c5;
   color: white;
@@ -73,7 +74,6 @@ body {
   min-height: 200px;
   transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
 }
-/* This wrapper will handle the content fading */
 .grid-content-wrapper {
   transition: opacity 0.4s ease-in-out;
 }
@@ -118,6 +118,7 @@ body {
   margin: 0;
 }
 
+/* --- Services / Tabs Section --- */
 .services-section {
   background-color: #fff;
 }
@@ -234,7 +235,7 @@ body {
   text-align: center;
 }
 
-/* Card styles */
+/* --- Card styles --- */
 .experience-card {
   position: relative;
   overflow: hidden;
@@ -331,133 +332,7 @@ body {
   font-weight: 400;
 }
 
-@media (max-width: 991.98px) {
-  .navbar-nav {
-    margin: 1rem 0 !important;
-    text-align: center;
-  }
-
-  .nav-item {
-    margin: 0.5rem 0;
-  }
-
-  .collapse.show .btn-lets-talk {
-    display: block;
-    width: 100%;
-    margin-top: 1rem;
-  }
-
-  .tab-content .service-links {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .social-impact-section .container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* --- Styles for Social Impact on Mobile --- */
-  .social-impact-section .section-title,
-  .social-impact-section .section-text {
-    text-align: left;
-  }
-
-  .social-impact-section .section-title {
-    order: 1;
-  }
-  .social-impact-section .section-text {
-    order: 2;
-  }
-  .social-impact-section .image-gallery {
-    order: 3;
-  }
-  .social-impact-section .section-link {
-    order: 4;
-  }
-
-  .social-impact-section .section-title {
-    margin-bottom: 30px;
-    font-size: 1.6rem;
-  }
-
-  .image-gallery {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    height: 220px;
-    max-width: 320px;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-  }
-
-  .gallery-img {
-    position: absolute;
-    width: 120px;
-    height: 120px;
-  }
-
-  .gallery-img:not(:first-child) {
-    margin-left: 0;
-  }
-
-  .gallery-img:nth-child(1) {
-    top: 0;
-    left: 0;
-  }
-
-  .gallery-img:nth-child(2) {
-    top: 0;
-    left: 85px;
-  }
-
-  .gallery-img:nth-child(3) {
-    top: 0;
-    left: 170px;
-  }
-
-  .gallery-img:nth-child(4) {
-    top: 140px;
-    left: 0;
-  }
-
-  .gallery-img:nth-child(5) {
-    top: 140px;
-    left: 85px;
-  }
-
-  .gallery-img:nth-child(6) {
-    top: 140px;
-    left: 170px;
-  }
-
-  .join-team-section {
-    padding: 3rem 0;
-  }
-
-  .section-title-team {
-    font-size: 2rem;
-    text-align: left;
-  }
-
-  .section-text-team {
-    text-align: left;
-    margin-bottom: 2rem;
-  }
-
-  .image-grid-container {
-    padding: 0.8rem;
-    background-color: #ebe2fb;
-  }
-
-  .btn-job-openings {
-    width: 100%;
-    position: static;
-    display: block;
-    text-align: center;
-    margin-top: 2rem;
-  }
-}
-
+/* --- Trusted / Scroller Section --- */
 .trusted {
   background: linear-gradient(to right, white 10%, #ebe2fb 25%);
   overflow-x: hidden;
@@ -554,13 +429,13 @@ body {
   user-select: none;
 }
 
+/* --- FAQ Section --- */
 .section-title-faq {
   text-align: left;
   font-weight: 700;
   color: #212529;
 }
 
-/* --- FAQ Section --- */
 .faq-section .accordion-item {
   border: none;
   border-bottom: 1px solid #e0e0e0;
@@ -575,7 +450,6 @@ body {
   box-shadow: none;
 }
 
-/* Custom Accordion Icons */
 .faq-section .accordion-button::after {
   font-family: "bootstrap-icons";
   content: "\f4fe"; /* Plus icon */
@@ -600,7 +474,7 @@ body {
   padding: 0 1rem 1.5rem;
 }
 
-/* --- Contact Card (Right Column) --- */
+/* --- Contact Card --- */
 .contact-card {
   background-color: #f8f9fa;
   padding: 2.5rem 2rem;
@@ -630,7 +504,7 @@ body {
   padding: 0.75rem 1rem;
 }
 
-/* --- Discuss CTA Section --- */
+/* --- CTA & Footer --- */
 .discuss-section {
   background-color: #4f149a;
   margin: 0 2px;
@@ -641,7 +515,6 @@ body {
   font-size: 1.5rem;
 }
 
-/* --- Footer Section --- */
 .footer-section {
   background-color: #4f149a;
   border-top: 2px solid #ffffff;
@@ -653,7 +526,193 @@ body {
   font-size: 1.5rem;
 }
 
-@media (max-width: 767.98px) {
+.success-stories .experience-card {
+  height: 420px;
+}
+
+/* ========================================= */
+/* === STYLES MERGED FROM OTHER CSS FILES === */
+/* ========================================= */
+
+/* --- Social Impact Section (Desktop) --- */
+.social-impact-section {
+  margin-top: 150px;
+  background: linear-gradient(to bottom, #ebe2fb 50%, #f2f2f2 50%);
+  padding: 4rem 0;
+}
+
+.social-impact-section .section-title {
+  text-align: center;
+  color: #000000;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.section-text {
+  color: #000000;
+  font-weight: 400;
+  max-width: 1185px;
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-img:not(:first-child) {
+  margin-left: -30px;
+}
+
+.section-link {
+  color: #4f149a;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 22px;
+}
+
+.section-link .bi-arrow-right {
+  transition: transform 0.3s ease;
+}
+
+.section-link:hover .bi-arrow-right {
+  transform: translateX(5px);
+}
+
+/* --- Join Team Section (Desktop) --- */
+.join-team-section {
+  padding: 5rem 0;
+  background-color: #fff;
+}
+
+.section-title-team {
+  font-style: bold;
+  font-weight: 700;
+  font-size: 30px;
+  color: #272a43;
+}
+
+.section-text-team {
+  font-size: 14px;
+  max-width: 800px;
+  color: black;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  line-height: 1.4;
+}
+
+.image-grid-container {
+  max-width: 1481px;
+  background-color: #ebe2fb;
+  border-radius: 24px;
+  padding: 0.8rem;
+  position: relative;
+  margin: 0 auto;
+}
+
+.img-container {
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-grid-desktop {
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  height: 400px;
+}
+
+.item-1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.item-2 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.item-3 {
+  grid-area: 1 / 2 / 3 / 3;
+}
+.item-4 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.item-5 {
+  grid-area: 2 / 3 / 3 / 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.btn-job-openings {
+  background-color: #fff;
+  color: #4f149a;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.btn-job-openings i {
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.image-grid-mobile .main-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.image-grid-mobile .sub-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.image-grid-mobile .sub-images img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+/* ===================================== */
+/* === RESPONSIVE STYLES (MEDIA QUERIES) === */
+/* ===================================== */
+
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    margin: 1rem 0 !important;
+    text-align: center;
+  }
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+  .collapse.show .btn-lets-talk {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
   .hero-section {
     flex-direction: column;
   }
@@ -670,6 +729,114 @@ body {
     min-height: 160px;
   }
 
+  .main-container {
+    padding: 6rem 1.5rem;
+  }
+  .background-text-trusted {
+    font-size: 7rem;
+    margin-bottom: 20px;
+  }
+
+  .tab-content .service-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .social-impact-section .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .social-impact-section .section-title,
+  .social-impact-section .section-text {
+    text-align: left;
+  }
+  .social-impact-section .section-title {
+    order: 1;
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+  }
+  .social-impact-section .section-text {
+    order: 2;
+  }
+  .social-impact-section .image-gallery {
+    order: 3;
+  }
+  .social-impact-section .section-link {
+    order: 4;
+  }
+
+  /* This is the general mobile rule for the gallery */
+  .image-gallery {
+    height: 220px;
+    max-width: 320px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .gallery-img {
+    position: static;
+    width: 120px;
+    height: 120px;
+
+    margin: 5px;
+  }
+  .gallery-img:not(:first-child) {
+    margin-left: -30px;
+  }
+  .gallery-img:nth-child(1) {
+    top: 0;
+    left: 0;
+  }
+  .gallery-img:nth-child(2) {
+    top: 0;
+    left: 85px;
+  }
+  .gallery-img:nth-child(3) {
+    top: 0;
+    left: 170px;
+  }
+  .gallery-img:nth-child(4) {
+    top: 140px;
+    left: 0;
+  }
+  .gallery-img:nth-child(5) {
+    top: 140px;
+    left: 85px;
+  }
+  .gallery-img:nth-child(6) {
+    top: 140px;
+    left: 170px;
+  }
+
+  .join-team-section {
+    padding: 3rem 0;
+  }
+  .section-title-team {
+    font-size: 2rem;
+    text-align: left;
+  }
+  .section-text-team {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  .image-grid-container {
+    padding: 0.8rem;
+    background-color: #ebe2fb;
+  }
+  .btn-job-openings {
+    width: 100%;
+    position: static;
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
   .section-title-image {
     text-align: left;
   }
@@ -685,28 +852,21 @@ body {
   .horizontal-scroll-container::-webkit-scrollbar-track {
     background: #f8f9fa;
   }
-
   .horizontal-scroll-item {
     flex: 0 0 80%;
     max-width: 95%;
     margin-right: 1rem;
   }
 
-  .row.g-4 {
-    --bs-gutter-x: 0 !important;
-  }
-
   .experience-card .card-text {
     display: none;
   }
-
   .experience-card .card-links {
     opacity: 1;
     transform: translateY(0);
     max-height: 200px;
     overflow: visible;
   }
-
   .card-links li a {
     font-size: 0.78rem;
   }
@@ -719,53 +879,19 @@ body {
   .main-container {
     padding: 4rem 1rem;
   }
-
   .section-title-trusted {
     text-align: left;
     font-size: 1.5rem;
   }
-
   .section-text-trusted {
     text-align: left;
     font-size: 0.9rem;
   }
-
   .background-text-trusted {
     font-size: 3rem;
-    bottom: 0.5rem;
+    margin-bottom: 15vw;
   }
-
   .logo-scroller {
     max-width: 100%;
   }
-}
-
-@media (max-width: 992px) {
-  .hero-section {
-    flex-direction: column;
-  }
-  .animation-wrapper {
-    width: 100%;
-    order: -1;
-  }
-  .hero-text-container {
-    padding: 3rem 1.5rem;
-    width: 100%;
-    justify-content: flex-start;
-  }
-  .grid-item {
-    min-height: 160px;
-  }
-
-  .background-text-trusted {
-    font-size: 8rem;
-    bottom: -1.5rem;
-  }
-  .main-container {
-    padding: 6rem 1.5rem;
-  }
-}
-
-.success-stories .experience-card {
-  height: 420px;
 }

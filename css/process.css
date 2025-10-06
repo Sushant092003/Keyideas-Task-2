@@ -1,12 +1,8 @@
-/* --- ADD THESE STYLES TO THE END OF YOUR CSS FILE --- */
-
-/* 1. Basic container styling for the new section */
 .arrow-section {
   padding: 1rem 10rem;
-  background-color: #ffffff; /* Use a white or light grey background */
+  background-color: #ffffff;
 }
 
-/* 2. Styles for the content inside the arrow-section */
 .arrow-section .main-content {
   display: flex;
   flex-direction: column;
@@ -29,6 +25,7 @@
   color: #000;
   margin-bottom: 12rem;
   max-width: 600px;
+  line-height: 1.7;
 }
 
 .arrow-section .breadcrumb-container {
@@ -162,6 +159,10 @@
 
 /* 3. Responsive styles for the timeline */
 @media (max-width: 1200px) {
+  .arrow-section {
+    padding: 1rem 2rem;
+  }
+
   .arrow-section .main-content h1 {
     font-size: 2.2rem;
   }
@@ -239,6 +240,10 @@
 }
 
 @media (max-width: 768px) {
+  .arrow-section {
+    padding: 1rem 2rem;
+  }
+
   .arrow-section .main-content h1 {
     text-align: left;
     font-size: 2rem;
@@ -251,6 +256,7 @@
   .arrow-section .breadcrumb-container {
     flex-direction: column;
     gap: 20px;
+    counter-reset: timeline-counter;
   }
   .arrow-section .timeline-step,
   .arrow-section .timeline-step:not(:first-child),
@@ -265,6 +271,7 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     text-align: left;
   }
+
   .arrow-section .timeline-step::before,
   .arrow-section .timeline-capsule .icon-circle {
     display: none;
@@ -275,13 +282,22 @@
     max-width: none;
     width: 100%;
   }
+
   .arrow-section .timeline-capsule .label {
-    width: 100%;
+    flex-grow: 1;
     text-align: left;
     font-weight: 600;
     padding: 1rem;
     border-radius: 12px;
   }
+
+  .arrow-section .timeline-capsule .label::before {
+    counter-increment: timeline-counter;
+    content: counter(timeline-counter) ".";
+    font-weight: 700;
+    margin-right: 0.75rem;
+  }
+
   .arrow-section .timeline-step .breadcrumb-item,
   .arrow-section .timeline-step:first-child .breadcrumb-item,
   .arrow-section .timeline-step:last-child .breadcrumb-item,
