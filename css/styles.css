@@ -35,87 +35,118 @@ body {
   margin: 0;
 }
 
-.hero-section {
+.page-wrapper {
   display: flex;
-  flex-direction: row-reverse;
-  min-height: 100vh;
-  width: 100%;
+  width: 100vw;
+}
+
+.left-text-content {
+  padding: 50px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left-text-content h1 {
+  font-size: 3rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.left-text-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-top: 20px;
+}
+
+.ki-home-banner-animation {
+  flex: 2;
   overflow: hidden;
 }
-.animation-wrapper {
-  width: 60%;
-  flex-shrink: 0;
+
+.aj-animation-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 220px);
+  position: relative;
+  height: 100%;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
-.hero-text-container {
-  flex-grow: 1;
+
+.aj-grid-ele {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
-  padding-left: 5rem;
-}
-
-.hero-title {
-  font-weight: 700;
-  font-size: clamp(2rem, 4vw, 3rem);
-}
-.hero-subtitle {
-  font-weight: 400;
-  font-size: clamp(1rem, 2vw, 1.15rem);
-  padding-top: 15px;
-}
-.grid-item {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
   text-align: center;
-  min-height: 200px;
-  transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
-}
-.grid-content-wrapper {
-  transition: opacity 0.4s ease-in-out;
+  padding: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  visibility: visible;
 }
 
-.bg-purple-light {
+.aj-light-purple {
   background-color: #cfa9ff;
 }
-.bg-purple-medium {
+
+.aj-medium-purple {
   background-color: #7646d7;
 }
-.bg-purple-dark {
+
+.aj-dark-purple {
   background-color: #4f149a;
 }
-.outer-bottom-left-radius {
-  border-bottom-left-radius: 1rem;
-}
-.outer-shadow {
-  box-shadow: -8px 8px 20px rgba(0, 0, 0, 0.15);
+
+.text-size-transform {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-.grid-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  width: 100%;
+.text-h3-size {
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
 }
-.grid-content img {
+
+.text-size-para {
+  font-size: 0.8rem;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+.img-fluid {
   max-width: 100%;
   height: auto;
 }
-.grid-content h4 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-top: 0.5rem;
-  margin-bottom: 0.25rem;
+
+.aj-clutch-cont img {
+  margin-bottom: 10px;
+  max-height: 50px;
+  width: auto;
 }
-.grid-content p {
-  font-size: 0.8rem;
-  line-height: 1.4;
-  opacity: 0.9;
-  margin: 0;
+
+.aj-ms-image {
+  max-width: 160px;
+}
+
+.temp-aj-grid-ele {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.one {
+  border-bottom-left-radius: 30px;
+}
+
+.six {
+  border-bottom-left-radius: 30px;
+}
+
+.eleven {
+  border-bottom-left-radius: 30px;
 }
 
 /* --- Services / Tabs Section --- */
@@ -713,25 +744,52 @@ body {
     margin-top: 1rem;
   }
 
-  .hero-section {
-    flex-direction: column;
-  }
-  .animation-wrapper {
-    width: 100%;
-    order: -1;
-  }
-  .hero-text-container {
-    padding: 3rem 1.5rem;
-    width: 100%;
-    justify-content: flex-start;
+  .page-wrapper {
+    flex-direction: column-reverse;
+    height: auto;
   }
 
-  .grid-item {
-    min-height: 160px;
+  .left-text-content {
+    text-align: left;
+    padding: 80px 0 0 10px;
   }
 
-  .main-container {
-    padding: 6rem 1.5rem;
+  .left-text-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .left-text-content p {
+    font-size: 1rem;
+  }
+
+  .ki-home-banner-animation {
+    flex: none;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .aj-animation-grid {
+    grid-template-rows: repeat(3, 160px);
+  }
+
+  .text-size-transform {
+    font-size: 0.8rem;
+  }
+
+  .text-h3-size {
+    font-size: 0.5rem;
+  }
+
+  .text-size-para {
+    font-size: 0.5rem;
+  }
+
+  .aj-clutch-cont img {
+    max-height: 35px;
+  }
+
+  .aj-ms-image {
+    max-width: 80px;
   }
 
   .background-text-trusted {
