@@ -725,6 +725,7 @@ body {
     width: 100%;
     justify-content: flex-start;
   }
+
   .grid-item {
     min-height: 160px;
   }
@@ -732,6 +733,7 @@ body {
   .main-container {
     padding: 6rem 1.5rem;
   }
+
   .background-text-trusted {
     font-size: 7rem;
     margin-bottom: 20px;
@@ -739,6 +741,11 @@ body {
 
   .tab-content .service-links {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .success-stories .experience-card,
+  .experience-card {
+    height: 50vh;
   }
 
   .social-impact-section .container {
