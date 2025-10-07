@@ -47,7 +47,7 @@
   max-width: 900px;
   margin: 0 auto;
   align-items: center;
-  min-height: 250px; /* Prevent layout shift */
+  min-height: 250px;
 }
 
 .tech-item {

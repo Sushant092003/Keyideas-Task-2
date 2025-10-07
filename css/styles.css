@@ -4,7 +4,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-/* NavBar Styling */
 .navbar-brand img {
   height: 35px;
 }
@@ -307,6 +306,7 @@ body {
 .experience-card:hover .card-img {
   transform: scale(1.05);
   filter: brightness(0.5);
+  background-blend-mode: overlay;
 }
 
 .card-body {
@@ -738,6 +738,7 @@ body {
   .nav-item {
     margin: 0.5rem 0;
   }
+
   .collapse.show .btn-lets-talk {
     display: block;
     width: 100%;

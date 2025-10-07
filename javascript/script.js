@@ -37,11 +37,8 @@ function applyMobileScroll(grid) {
   }
 }
 
-// CHANGE: New main function to handle multiple grids
 function initAllGrids() {
-  // Select ALL elements with the class
   const grids = document.querySelectorAll(".experience-grid-js");
-  // Loop through each one and apply the logic
   grids.forEach((grid) => {
     applyMobileScroll(grid);
   });
@@ -184,7 +181,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const techGrid = document.querySelector(".expertise-section .tech-grid");
 
   function renderTechGrid(category) {
-    // Guard clause in case the grid doesn't exist on the page
     if (!techGrid) return;
 
     techGrid.innerHTML = ""; // Clear existing items
@@ -206,11 +202,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Ensure servicePills exist before adding listeners
   if (servicePills.length > 0) {
     servicePills.forEach((pill) => {
       pill.addEventListener("mouseover", () => {
-        // Remove active class from currently active pill
         const currentActive = document.querySelector(
           ".expertise-section .service-pills .btn.active"
         );
@@ -224,7 +218,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    // Initial render for the default active category
     renderTechGrid("Backend");
   }
 });
