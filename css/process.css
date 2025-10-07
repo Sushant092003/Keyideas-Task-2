@@ -158,7 +158,7 @@
 }
 
 /* 3. Responsive styles for the timeline */
-@media (max-width: 1200px) {
+@media (min-width: 769px) and (max-width: 1200px) {
   .arrow-section {
     padding: 1rem 2rem;
   }
