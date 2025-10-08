@@ -1,74 +1,609 @@
-/* --- Expertise Section --- */
-.expertise-section {
-  padding: 6rem 0;
-  background-color: #fff;
+:root {
+  --primary-color: rgb(79, 20, 154);
+  --light-primary-color: rgb(235, 226, 251);
+  --text-color: rgb(0, 0, 0);
+  --text-color-light: rgb(255, 255, 255);
+  --bg-color: #f8f9fa;
 }
 
-.expertise-section .section-title {
-  font-weight: 700;
-  color: #212529;
+body {
+  font-family: "Poppins", sans-serif;
 }
 
-.expertise-section .subheading {
-  max-width: 600px;
-  margin: 1rem auto 3rem;
-  color: #555;
-}
-
-.service-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-bottom: 4rem;
-}
-
-.service-pills .btn {
-  border-radius: 50px;
-  font-weight: 500;
-  padding: 0.6rem 1.5rem;
-  background-color: #f8f9fa;
-  color: #333;
-  border: 1px solid #e0e0e0;
-  transition: all 0.3s ease;
-}
-
-.service-pills .btn.active,
-.service-pills .btn:hover {
-  background-color: #6f42c1;
-  color: #fff;
-  border-color: #6f42c1;
-}
-
-.tech-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 2rem;
-  max-width: 900px;
+.container {
+  width: 100%;
   margin: 0 auto;
-  align-items: center;
-  min-height: 250px;
+  max-width: 1280px;
 }
 
-.tech-item {
+.tech-stack-text {
   text-align: center;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 1;
+  max-width: 800px;
+  margin: 0 auto 2.5rem auto;
 }
 
-.tech-item:hover {
-  transform: translateY(-5px);
+.heading2-ele {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-.tech-item svg {
-  height: 48px;
-  width: 48px;
-  margin-bottom: 0.75rem;
-  color: #6f42c1; /* Use a default color for icons */
+.tech-stack-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #000;
 }
 
-.tech-item p {
+.sc-btns {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  max-width: 1100px; /* Constrain the container */
+  gap: 15px;
+  margin: 0 auto 2rem auto;
+}
+
+.sc-btn {
+  text-align: center;
+  color: var(--text-color);
+  /* flex-grow: 1; */ /* Removed this */
+  cursor: pointer;
+  font-size: 14px;
   font-weight: 500;
-  color: #444;
-  margin-bottom: 0;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: var(--light-primary-color);
+  border: 2px solid transparent;
+}
+
+.sc-btn.active,
+.sc-btn:hover {
+  color: var(--text-color-light);
+  background: var(--primary-color) !important;
+}
+
+.display-section {
+  margin-top: 40px; /* Increased margin to give more space */
+  min-height: 450px;
+  overflow: hidden;
+  padding: 1rem 0; /* Added some vertical padding */
+}
+
+.sc-section {
+  display: none; /* Hidden by default */
+  opacity: 0;
+  animation: fadeOut 0.4s ease-out forwards;
+}
+
+.sc-section.active {
+  display: grid; /* Becomes visible */
+  opacity: 1;
+  animation: fadeIn 0.4s ease-in forwards;
+}
+
+.sc-section-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.sc-sprite-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 100%;
+  gap: 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.logo-sprite {
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 50px;
+}
+
+.sc-backend-sprite {
+  background-image: url("../assets/logo/backend-desktop.webp");
+}
+
+.sc-frontend-sprite {
+  background-image: url("../assets/logo/Frontend.webp");
+}
+
+.sc-data-sprite {
+  background-image: url("../assets/logo/Data-and-Databases.webp");
+}
+
+.sc-quality-sprite {
+  background-image: url("../assets/logo/Quality-Engineering.webp");
+}
+
+.sc-mobile-sprite {
+  background-image: url("../assets/logo/Mobile-Apps-PWA.webp");
+}
+
+.sc-cloud-sprite {
+  background-image: url("../assets/logo/Cloud-DevOps.webp");
+}
+
+.sc-digital-sprite {
+  background-image: url("../assets/logo/Digital-Experience-Platforms.webp");
+}
+
+.sc-project-sprite {
+  background-image: url("../assets/logo/Project-Management.webp");
+}
+
+.sc-shop-sprite {
+  background-image: url("../assets/logo/Shop-E-Commerce-Platforms.webp");
+}
+
+.sc-logo-asp-net {
+  background-position: 0 -7px;
+  width: 97px;
+  height: 57px;
+}
+
+.sc-logo-c-sharp {
+  background-position: -346px 0;
+  width: 61px;
+  height: 70px;
+}
+
+.sc-logo-code-igniter {
+  background-position: -681px -15px;
+  width: 158px;
+  height: 40px;
+}
+
+.sc-logo-entity-framework {
+  background-position: -977px -15px;
+  width: 203px;
+  height: 41px;
+}
+
+.sc-logo-larvel {
+  background-position: 0 -179px;
+  width: 134px;
+  height: 35px;
+}
+
+.sc-logo-net-core {
+  background-position: -346px -159px;
+  width: 73px;
+  height: 74px;
+}
+
+.sc-logo-node-js {
+  background-position: -715px -178px;
+  width: 124px;
+  height: 36px;
+}
+
+.sc-logo-php {
+  background-position: -1075px -169px;
+  width: 104px;
+  height: 55px;
+}
+
+.sc-logo-word-press {
+  background-position: -2px -339px;
+  width: 130px;
+  height: 55px;
+}
+.sc-logo-wix {
+  background-position: -345px -352px;
+  width: 74px;
+  height: 29px;
+}
+
+.sc-logo-angular {
+  background-position: -1px -4px;
+  width: 186px;
+  height: 51px;
+}
+
+.sc-logo-ant-design {
+  background-position: -517px -3px;
+  width: 243px;
+  height: 52px;
+}
+
+.sc-logo-bootsrap {
+  background-position: -1045px -2px;
+  width: 214px;
+  height: 54px;
+}
+
+.sc-logo-html {
+  background-position: 0 -197px;
+  width: 150px;
+  height: 50px;
+}
+
+.sc-logo-j-query {
+  background-position: -516px -202px;
+  width: 176px;
+  height: 38px;
+}
+
+.sc-logo-js {
+  background-position: -1134px -192px;
+  width: 125px;
+  height: 59px;
+}
+
+.sc-logo-react {
+  background-position: 0 -440px;
+  width: 172px;
+  height: 47px;
+}
+
+.sc-logo-redux {
+  background-position: -518px -439px;
+  width: 178px;
+  height: 48px;
+}
+
+.sc-logo-require-js {
+  background-position: -1121px -388px;
+  width: 137px;
+  height: 151px;
+}
+
+.sc-logo-tailwind-css {
+  background-position: 0 -694px;
+  width: 261px;
+  height: 32px;
+}
+
+.sc-logo-type-script {
+  background-position: -516px -679px;
+  width: 210px;
+  height: 64px;
+}
+
+.sc-logo-vue-js {
+  background-position: -1069px -677px;
+  width: 189px;
+  height: 67px;
+}
+
+.sc-logo-amazon-db {
+  background-position: 0 0;
+  width: 194px;
+  height: 77px;
+}
+
+.sc-logo-amazon-s3 {
+  background-position: -514px 0;
+  width: 178px;
+  height: 76px;
+}
+
+.sc-logo-elastic-search {
+  background-position: -1017px -13px;
+  width: 240px;
+  height: 50px;
+}
+
+.sc-logo-mongodb {
+  background-position: -1562px -11px;
+  width: 207px;
+  height: 55px;
+}
+
+.sc-logo-mysql {
+  background-position: -1px -211px;
+  width: 189px;
+  height: 99px;
+}
+
+.sc-logo-oracle {
+  background-position: -513px -261px;
+  width: 180px;
+  height: 25px;
+}
+
+.sc-logo-sql-server {
+  background-position: -1020px -244px;
+  width: 239px;
+  height: 61px;
+}
+
+.sc-logo-tenserflow {
+  background-position: -1534px -241px;
+  width: 233px;
+  height: 65px;
+}
+
+.sc-logo-browser-stack {
+  background-position: 0 -5px;
+  width: 234px;
+  height: 51px;
+}
+
+.sc-logo-j-meter {
+  background-position: -519px 0;
+  width: 189px;
+  height: 63px;
+}
+
+.sc-logo-android {
+  background-position: -519px 0;
+  width: 189px;
+  height: 63px;
+}
+
+.sc-logo-firebase {
+  background-position: -517px 0;
+  width: 188px;
+  height: 54px;
+}
+
+.sc-logo-ios {
+  background-position: -1131px -4px;
+  width: 126px;
+  height: 46px;
+}
+
+.sc-logo-pwa {
+  background-position: -1641px -1px;
+  width: 129px;
+  height: 50px;
+}
+
+.sc-logo-react-native {
+  background-position: 0 -189px;
+  width: 221px;
+  height: 51px;
+}
+
+.sc-logo-xamarin {
+  background-position: -516px -193px;
+  width: 179px;
+  height: 41px;
+}
+
+.sc-logo-aws {
+  background-position: 0 0;
+  width: 119px;
+  height: 71px;
+}
+
+.sc-logo-azure {
+  background-position: -516px -9px;
+  width: 176px;
+  height: 51px;
+}
+
+.sc-logo-docker {
+  background-position: -1039px -9px;
+  width: 220px;
+  height: 53px;
+}
+
+.sc-logo-git-lab {
+  background-position: -1605px -16px;
+  width: 164px;
+  height: 37px;
+}
+
+.sc-logo-google-cloud {
+  background-position: 0 -213px;
+  width: 247px;
+  height: 38px;
+}
+
+.sc-logo-jenkins {
+  background-position: -518px -206px;
+  width: 167px;
+  height: 52px;
+}
+
+.sc-logo-kubernetes {
+  background-position: -1037px -208px;
+  width: 220px;
+  height: 47px;
+}
+
+.sc-logo-adobe {
+  background-position: 0 -2px;
+  width: 193px;
+  height: 77px;
+}
+
+.sc-logo-figma {
+  background-position: -516px -1px;
+  width: 164px;
+  height: 79px;
+}
+
+.sc-logo-atlassian {
+  background-position: 0 -25px;
+  width: 216px;
+  height: 28px;
+}
+
+.sc-logo-jira-software {
+  background-position: -516px -23px;
+  width: 230px;
+  height: 31px;
+}
+
+.sc-logo-able-commerce {
+  background-position: 0 -18px;
+  width: 239px;
+  height: 44px;
+}
+
+.sc-logo-adobe-commerce {
+  background-position: -517px -15px;
+  width: 181px;
+  height: 48px;
+}
+
+.sc-logo-algolia {
+  background-position: -1101px -22px;
+  width: 154px;
+  height: 35px;
+}
+
+.sc-logo-bagisto {
+  background-position: -1579px -1px;
+  width: 190px;
+  height: 79px;
+}
+
+.sc-logo-google-analytics {
+  background-position: -12px -217px;
+  width: 186px;
+  height: 65px;
+}
+
+.sc-logo-klaviyo {
+  background-position: -517px -227px;
+  width: 147px;
+  height: 44px;
+}
+
+.sc-logo-mailchimp {
+  background-position: -1051px -220px;
+  width: 203px;
+  height: 56px;
+}
+
+.sc-logo-shopify {
+  background-position: -1612px -225px;
+  width: 158px;
+  height: 47px;
+}
+
+.sc-logo-woo-commerce {
+  background-position: -3px -420px;
+  width: 218px;
+  height: 44px;
+}
+
+/* Keyframe animations for fade in/out effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .heading2-ele {
+    font-size: 2.2rem !important; /* Slightly smaller heading for tablets */
+  }
+
+  .sc-btns {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .sc-btn:nth-child(-n + 4) {
+    /* First 4 buttons */
+    grid-column: span 3;
+  }
+  .sc-btn:nth-child(n + 5):nth-child(-n + 7) {
+    /* Buttons 5, 6, 7 */
+    grid-column: span 4;
+  }
+  .sc-btn:nth-child(n + 8) {
+    /* The last 2 buttons */
+    grid-column: span 6;
+  }
+
+  .sc-section-grid {
+    /* Adjust the grid for a better fit on tablets */
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .sc-sprite-parent {
+    transform: scale(0.7); /* Adjust logo size for tablets */
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .tech-stack-text {
+    margin: 0 auto 1.5rem auto;
+  }
+
+  .heading2-ele {
+    text-align: left;
+    font-size: 2rem !important; /* Smaller heading */
+  }
+
+  .tech-stack-text p {
+    text-align: left;
+    font-size: 1rem; /* Smaller paragraph text */
+  }
+
+  .sc-btns {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+  }
+
+  .sc-btn {
+    font-size: 12px;
+    padding: 5px 5px; /* Smaller buttons */
+  }
+
+  /* New styles for specific button grid layout */
+  .sc-btn:nth-child(1),
+  .sc-btn:nth-child(2),
+  .sc-btn:nth-child(3) {
+    grid-column: span 2;
+  }
+
+  .sc-btn:nth-child(4),
+  .sc-btn:nth-child(5),
+  .sc-btn:nth-child(6),
+  .sc-btn:nth-child(7) {
+    grid-column: span 3;
+  }
+
+  .sc-btn:nth-child(8),
+  .sc-btn:nth-child(9) {
+    grid-column: span 6;
+  }
+
+  .sc-section-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1rem; /* Reduce gap between logos */
+  }
+
+  .sc-sprite-parent {
+    transform: scale(0.5); /* Scale down the logo containers */
+    height: 100px;
+  }
 }
