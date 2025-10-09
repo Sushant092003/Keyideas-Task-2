@@ -1381,7 +1381,7 @@ body {
     gap: 1rem;
   }
   .sc-sprite-parent {
-    transform: scale(0.85);
+    transform: scale(0.6);
     height: 100px;
   }
   .diy-m-project-container,
@@ -1402,7 +1402,7 @@ body {
     gap: 2rem;
   }
   .diy-lead-div {
-    border-right: none; /* Remove separator on smaller screens */
+    border-right: none;
     padding-right: 0;
   }
   .diy-project-div {
@@ -1419,7 +1419,7 @@ body {
     grid-template-columns: repeat(12, 1fr);
   }
   .sc-btn:nth-child(-n + 4) {
-    grid-column: span 3;
+    grid-column: span 6;
   }
   .sc-btn:nth-child(n + 5):nth-child(-n + 7) {
     grid-column: span 4;
@@ -1437,7 +1437,7 @@ body {
 
   @media (max-width: 767px) {
     .disc-project {
-      flex-direction: column; /* Stack items vertically on mobile */
+      flex-direction: column;
     }
     .diy-h {
       font-size: 1rem;
@@ -1480,19 +1480,20 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
+
   .links-section .fs-title {
     margin-bottom: 1rem;
   }
+
   .fs-links-right .d-flex {
     flex-direction: row !important;
     align-items: center !important;
-    /* This is the fix for the button */
     display: inline-flex !important;
     white-space: nowrap;
   }
 
   .get-in-touch {
-    grid-column: 1 / -1; /* Span full width */
+    grid-column: 1 / -1;
     margin-top: 1rem;
   }
 
@@ -1500,11 +1501,13 @@ body {
     width: 100%;
     display: flex;
   }
+
   .office-location-left,
   .office-location-right {
     flex-basis: 50%;
-    padding: 0 5px; /* Add slight padding */
+    padding: 0 5px;
   }
+
   .office-location-left .fs-title,
   .office-location-right .fs-title {
     margin-bottom: 1.5rem;
@@ -1513,6 +1516,7 @@ body {
   .bottom-footer-line {
     display: none;
   }
+
   .fs-bottom-bar {
     flex-direction: column;
     gap: 1.5rem;
@@ -1524,6 +1528,7 @@ body {
     align-items: center;
     gap: 1rem;
   }
+
   .privacy-sitemap-links {
     display: flex;
     gap: 1.5rem;
@@ -1555,7 +1560,7 @@ body {
     justify-content: space-between;
   }
   .fs-links-right .fs-title > a.d-flex {
-    align-items: center; /* Vertically aligns "WE'RE HIRING" and the button */
+    align-items: center;
   }
   .additional-links {
     display: flex;
@@ -1567,7 +1572,7 @@ body {
   .additional-links p {
     margin: 0;
   }
-  /* This is the fix for the privacy/sitemap links */
+
   .privacy-sitemap-links {
     display: flex;
     gap: 1.5rem;
