@@ -1432,7 +1432,7 @@ body {
     gap: 1.5rem;
   }
   .sc-sprite-parent {
-    transform: scale(0.9);
+    transform: scale(0.7);
   }
 
   @media (max-width: 767px) {
