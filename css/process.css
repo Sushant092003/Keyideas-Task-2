@@ -146,6 +146,7 @@
 .arrow-section .timeline-step:nth-child(odd)::before {
   bottom: 100%;
 }
+
 .arrow-section .timeline-step:nth-child(odd) .timeline-capsule {
   bottom: calc(100% + 60px);
 }
@@ -153,6 +154,7 @@
 .arrow-section .timeline-step:nth-child(even)::before {
   top: 100%;
 }
+
 .arrow-section .timeline-step:nth-child(even) .timeline-capsule {
   top: calc(100% + 60px);
 }
