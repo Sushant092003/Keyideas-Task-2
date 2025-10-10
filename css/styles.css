@@ -341,21 +341,20 @@ body {
   margin-bottom: 2.5rem;
   font-size: 1.1rem;
 }
-
 .card-text {
   color: #e9ecef;
   font-size: 0.9rem;
-  margin-bottom: 1rem;
 }
 
 .card-links {
   list-style: none;
+  margin-bottom: 1rem;
   padding: 0;
   margin: 0;
   opacity: 0;
-  transform: translateY(20px);
   transition: opacity 0.4s ease, transform 0.4s ease;
   max-height: 0;
+  transform: translateY(20px);
   overflow: hidden;
 }
 
@@ -481,107 +480,126 @@ body {
   height: 80px;
   transform: scale(0.8);
 }
+
 .client-img5 {
   background-position: -430px -290px;
   width: 217px;
   height: 86px;
   transform: scale(0.8);
 }
+
 .client-img6 {
   background-position: -924px -298px;
   width: 80px;
   height: 70px;
   transform: scale(0.8);
 }
+
 .client-img7 {
   background-position: -1278px -308px;
   width: 225px;
   height: 50px;
 }
+
 .client-img8 {
   background-position: -221px -590px;
   width: 208px;
   height: 60px;
   transform: scale(0.8);
 }
+
 .client-img9 {
   background-position: -648px -567px;
   width: 205px;
   height: 105px;
   transform: scale(0.8);
 }
+
 .client-img10 {
   background-position: -1065px -578px;
   width: 225px;
   height: 82px;
   transform: scale(0.8);
 }
+
 .client-img11 {
   background-position: 0 -876px;
   width: 225px;
   height: 60px;
   transform: scale(0.8);
 }
+
 .client-img12 {
   background-position: -426px -893px;
   width: 225px;
   height: 27px;
 }
+
 .client-img13 {
   background-position: -814px -860px;
   width: 301px;
   height: 91px;
   transform: scale(0.8);
 }
+
 .client-img14 {
   background-position: -1279px -853px;
   width: 222px;
   height: 105px;
   transform: scale(0.8);
 }
+
 .client-img15 {
   background-position: -213px -1158px;
   width: 225px;
   height: 70px;
 }
+
 .client-img16 {
   background-position: -639px -1169px;
   width: 225px;
   height: 47px;
 }
+
 .client-img17 {
   background-position: -1032px -1179px;
   width: 215px;
   height: 25px;
 }
+
 .client-img18 {
   background-position: -9px -1440px;
   width: 208px;
   height: 79px;
   transform: scale(0.8);
 }
+
 .client-img19 {
   background-position: -416px -1460px;
   width: 245px;
   height: 38px;
 }
+
 .client-img20 {
   background-position: -852px -1457px;
   width: 223px;
   height: 44px;
 }
+
 .client-img21 {
   background-position: -1283px -1445px;
   width: 215px;
   height: 68px;
   transform: scale(0.8);
 }
+
 .client-img22 {
   background-position: -218px -1744px;
   width: 213px;
   height: 41px;
   transform: scale(0.8);
 }
+
 .client-img23 {
   background-position: -642px -1718px;
   width: 218px;
@@ -629,7 +647,7 @@ body {
 
 .faq-section .accordion-button::after {
   font-family: "bootstrap-icons";
-  content: "\f4fe"; /* Plus icon */
+  content: "\f4fe";
   background-image: none;
   font-weight: bold;
   color: #6f42c1;
@@ -637,7 +655,7 @@ body {
 }
 
 .faq-section .accordion-button:not(.collapsed)::after {
-  content: "\f463"; /* Minus icon */
+  content: "-"; /* Minus icon */
   transform: scale(1.2);
 }
 
